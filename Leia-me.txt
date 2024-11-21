@@ -1,0 +1,38 @@
+TPINDUSTRIA - Sistema de Gestão Industrial
+===========================================
+
+Este sistema foi desenvolvido para a disciplina de Banco de Dados II, permitindo gerenciar fornecedores, produtos, compras, consumos e gerar relatórios gerenciais.
+
+===========================================
+PRÉ-REQUISITOS
+===========================================
+
+1. **Node.js**:
+   - Certifique-se de que o Node.js está instalado no seu sistema.
+   - Caso não esteja, baixe-o no site oficial: https://nodejs.org/
+
+
+
+===========================================
+INSTRUÇÕES PARA USAR A APLICAÇÃO
+===========================================
+
+1. **Rodar o Servidor**:
+   - Dentro da pasta do projeto, abra o terminal e execute o comando:
+     ```
+     node server.js
+     ```
+   - Se o servidor iniciar com sucesso, você verá uma mensagem no terminal indicando que ele está rodando.
+
+2. **Acessar a Aplicação**:
+   - No navegador, acesse o seguinte endereço:
+     ```
+     http://localhost:3000
+     ```
+   - Login: admin 
+   - Senha: admin
+
+
+
+
+

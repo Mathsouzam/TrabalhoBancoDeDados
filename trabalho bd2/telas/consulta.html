@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <style>
+        .navbar {
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .btn-green {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-green:hover {
+            background-color: #218838;
+            color: white;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .navbar-nav .nav-item {
+            margin-right: 15px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">TPINDUSTRIA</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/consulta">Consulta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/cadastroFornecedor">Cadastrar um Fornecedor</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/relatoriosGerenciais">Relatórios Gerenciais</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/realizarCompra">Realizar Compra</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/consumirProduto">Consumir Produto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Resultados da Consulta</h1>
+
+        <form action="/query" method="post" class="mb-4">
+            <div class="form-group">
+                <label for="numTabela">Selecione a Tabela:</label>
+                <select name="numTabela" id="numTabela" class="form-control">
+                    <option value="1">Fornecedor</option>
+                    <option value="3">Produto</option>
+                    <option value="4">Compras</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-green">Consultar</button>
+        </form>
+
+        <% if (data) { %>
+            <div class="row">
+                <% data.forEach(row => { %>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <% Object.keys(row).forEach(key => { %>
+                                    <h5 class="card-title"><%= key %></h5>
+                                    <p class="card-text"><%= row[key] %></p>
+                                <% }) %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        <% } %>
+    </div>
+
+ 
+</body>
+</html>

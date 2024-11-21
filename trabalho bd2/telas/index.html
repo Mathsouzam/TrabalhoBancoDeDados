@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP INDUSTRIAS</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/styles.css" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #ffffff; 
+        }
+        .container {
+            max-width: 800px;
+        }
+        .card {
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 1rem;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-text {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">TP INDUSTRIAS</h1>
+        <div class="row mt-5 justify-content-center">
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='/consulta'">
+                    <div class="card-body">
+                        <h5 class="card-title">Consulta</h5>
+                        <p class="card-text">Realize consultas nas tabelas do sistema.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='/cadastroFornecedor'">
+                    <div class="card-body">
+                        <h5 class="card-title">Cadastrar Fornecedor</h5>
+                        <p class="card-text">Cadastre novos fornecedores no sistema.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='/relatoriosGerenciais'">
+                    <div class="card-body">
+                        <h5 class="card-title">Relatórios Gerenciais</h5>
+                        <p class="card-text">Visualize registros gerais do sistema.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='/realizarCompra'">
+                    <div class="card-body">
+                        <h5 class="card-title">Registrar Compra</h5>
+                        <p class="card-text">Realize compras de produtos.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" onclick="location.href='/consumirProduto'">
+                    <div class="card-body">
+                        <h5 class="card-title">Consumir Produto</h5>
+                        <p class="card-text">Registre o consumo de produtos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
